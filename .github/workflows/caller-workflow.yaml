@@ -6,4 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # - uses: ./.github/workflows/called-workflow.yaml
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
       - run: npm i
