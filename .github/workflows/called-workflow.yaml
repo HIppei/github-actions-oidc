@@ -9,8 +9,6 @@ jobs:
   reusable-workflow-call:
     runs-on: ubuntu-latest
     steps:
-      - run: env
-
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
@@ -22,3 +20,4 @@ jobs:
             let id_token = await coredemo.getIDToken()
             coredemo.setOutput('id_token', id_token)
             console.log(id_token)
+      - run: env
