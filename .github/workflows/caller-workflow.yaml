@@ -3,4 +3,7 @@ on: push
 
 jobs:
   call-reusable-workflow:
-    uses: ./.github/workflows/called-workflow.yaml
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: ./.github/workflows/called-workflow.yaml
+      - run: npm i
