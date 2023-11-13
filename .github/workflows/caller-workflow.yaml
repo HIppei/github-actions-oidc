@@ -1,0 +1,6 @@
+run-name: This workflow calls reusable workflow
+on: push
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/called-workflow.yaml

@@ -1,0 +1,10 @@
+run-name: This workflow starts oidc token acquiring
+on: workflow_call
+
+jobs:
+  reusable-workflow-call:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
+      - name: oidc token
+        run: echo ${{ vars.ACTIONS_ID_TOKEN_REQUEST_URL }}
