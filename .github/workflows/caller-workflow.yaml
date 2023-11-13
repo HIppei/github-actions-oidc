@@ -16,3 +16,4 @@ jobs:
         with:
           node-version: 18.x
       - run: npm i
+      - run: ls ./node_modules
