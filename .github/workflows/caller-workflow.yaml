@@ -3,8 +3,6 @@ on: push
 
 jobs:
   call-reusable-workflow:
-    permissions:
-      packages: read
     runs-on: ubuntu-latest
     steps:
       # - uses: ./.github/workflows/called-workflow.yaml
