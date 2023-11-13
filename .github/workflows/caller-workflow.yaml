@@ -9,8 +9,8 @@ jobs:
     steps:
       # - uses: ./.github/workflows/called-workflow.yaml
       - uses: actions/checkout@v4
-      # - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ./.npmrc
-      # - run: cat ./.npmrc
+      - run: echo "\//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ./.npmrc
+      - run: cat ./.npmrc
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
