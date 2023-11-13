@@ -1,6 +1,10 @@
 run-name: This workflow starts oidc token acquiring
 on: workflow_call
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   reusable-workflow-call:
     runs-on: ubuntu-latest
