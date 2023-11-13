@@ -7,8 +7,8 @@ jobs:
       packages: read
     runs-on: ubuntu-latest
     steps:
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
-      - run: cat .npmrc
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ./.npmrc
+      - run: cat ./.npmrc
       # - uses: ./.github/workflows/called-workflow.yaml
       - uses: actions/checkout@v4
       - name: Use Node.js
